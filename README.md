@@ -1,6 +1,7 @@
 # InstrucTune
-
-InstrucTune is a prompt enginnering application aimed at automating the refinement of prompts using OpenAI's GPT model. It iteratively tunes instructions to generate valid responses, making it a powerful tool for prompt engineering. Given a system prompt and additional context from previous chat interactions, the app iteratively refines the prompt to produce a valid response up to a specified number of cycles or until it reaches the desired LLM output.
+InstrucTune is a prompt enginnering application aimed at automating the refinement of prompts using OpenAI's GPT model. It iteratively tunes instructions to generate valid responses, making it a powerful tool for prompt engineering. 
+![Alt text](images/instructune.png)
+Given a system prompt and additional context from previous chat interactions, the app iteratively refines the prompt to produce a valid response up to a specified number of cycles or until it reaches the desired LLM output.
 
 ## Features
 
