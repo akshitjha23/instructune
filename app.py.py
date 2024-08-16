@@ -61,7 +61,7 @@ st.subheader("Chat History")
 history_input = st.text_area(
     "Enter the history (in JSON format)",
     height=200,
-    help='Enter the chat history between the assistant and user in JSON format. Example:\n[\n{"role": "assistant", "content": "Hi, welcome to HR Assist, how can I help you today?"},\n{"role": "user", "content": "report case"}\n]'
+    help='Enter the chat history between the assistant and user in JSON format. Example:\n[\n{"role": "assistant", "content": "Hi, how can I help you today?"},\n{"role": "user", "content": "Check bank balance"}\n{"role": "assistant", "content": "Here is your balance: 25$"}]'
 )
 
 history = json.loads(history_input) if history_input else []
@@ -70,21 +70,21 @@ st.subheader("User Input")
 user_input = st.text_area(
     "Enter the user input content",
     height=50,
-    help='Enter the latest user input. Example:\nregarding voluntary termination'
+    help='Enter the latest user input. Example:\nAnd my credit card?'
 )
 
 st.subheader("Error Output")
 err_output = st.text_area(
     "Enter the error output (in JSON format)",
     height=50,
-    help='Enter the assistant\'s response that was not in line with the instructions in JSON format. Example:\n{"identified_intents":[14]}'
+    help='Enter the assistant\'s response that was not in line with the instructions in JSON format. Example:\n{"identified_intents":["apply for credit card"]}'
 )
 
 st.subheader("Expected Output")
 exp_output = st.text_area(
     "Expected Output",
     height=50,
-    help='Enter the expected correct output in JSON format. Example:\n{"identified_intents":[-1]}'
+    help='Enter the expected correct output in JSON format. Example:\n{"identified_intents":[None]}'
 )
 client = OpenAI(api_key=api_key)
 if st.button("Run Pipeline") and api_key != "":
