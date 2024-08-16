@@ -35,9 +35,11 @@ def validate_prompt(eval_analysis, err_output, system, history, user_input, new_
         {"role":"user", "content": f"Here's the system prompt and additional information to inform your analysis:\n System prompt: {system}\n\n Chat History: {history}\nUser input: {user_input}\n Assistant's output: {new_output}\nPrevious responses which were not in line with instructions: {err_output}\nExpected Output: {exp_output}\nPrevious analysis: {eval_analysis}"}
     ]
     return generate_response(messages)
-st.sidebar.title("About This App")
+
 api_key = st.sidebar.text_input("Please enter your OpenAI API key:")
 cycles = st.sidebar.slider("Enter the number of cycles you want to run (maximum is 10):", min_value=1, max_value=10, value=2)
+
+st.sidebar.title("About This App")
 st.sidebar.markdown("""
 This app uses OpenAI's GPT model to generate and validate prompts in a pipeline. Here is how it works:
 
@@ -47,8 +49,8 @@ This app uses OpenAI's GPT model to generate and validate prompts in a pipeline.
 4. **Validate Response**: The app then validates the generated response to check if it meets the criteria.
 5. **Iteration**: The app can iterate up to the number of cycles you specify in the sidebar to refine the prompt until a valid response is generated.
 """)
-
-st.title("Auto Prompt Engineering Pipeline")
+st.title("InstrucTune")
+st.markdown("<p style='text-align: left; font-size: 24px;'>Auto Prompt Engineering Pipeline</p>", unsafe_allow_html=True)
 
 st.subheader("System Prompt")
 system = st.text_area(
