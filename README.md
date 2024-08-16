@@ -1,6 +1,6 @@
-# Auto Prompt Engineering Pipeline
+# InstrucTune
 
-This repository provides an application built with Streamlit and OpenAI that demonstrates an automated pipeline for prompt engineering. Given a system prompt and additional context from previous chat interactions, the app iteratively refines the prompt to produce a valid response up to a specified number of cycles.
+InstrucTune is a prompt enginnering application aimed at automating the refinement of prompts using OpenAI's GPT model. It iteratively tunes instructions to generate valid responses, making it a powerful tool for prompt engineering. Given a system prompt and additional context from previous chat interactions, the app iteratively refines the prompt to produce a valid response up to a specified number of cycles or until it reaches the desired LLM output.
 
 ## Features
 
