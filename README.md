@@ -23,7 +23,7 @@ Given a system prompt and additional context from previous chat interactions, th
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/akshitjha23/instructune.git
+   git clone https://github.com/instructune/instructune.git
    cd instructune
    ```
 
@@ -74,5 +74,5 @@ Run the Streamlit app:
 ## License <a name = "license"></a>
 
 This project is licensed under the MIT License - see
-the [LICENSE](https://github.com/akshitjha23/instructune/blob/main/LICENSE) file for
+the [LICENSE](LICENSE) file for
 details.
